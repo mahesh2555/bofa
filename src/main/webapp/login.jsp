@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    HttpSession session = request.getSession(false);
+    // 'session' is an implicit JSP object – don't redeclare it
     if (session != null && session.getAttribute("userName") != null) {
         // Already logged in, go to home
         response.sendRedirect(request.getContextPath() + "/home");
